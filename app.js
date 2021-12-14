@@ -27,18 +27,12 @@ const port = process.env.port || 3000
 
 
 app
-    .use(express.json())
     .use(express.static("./public"))
-
+    .use([express.urlencoded({ extended: false }), express.json()])
     .use("/api/v1/product", productRouter)
-    //.post('/stripe', stripeController)
-
-    //.get('/', (req, res) => {
-    //    res.send("<h1> File Upload Starter </h1>")
-    //})
-
+    .use('/send', router)
+    .get("/", (req,res) =>{res.send("")})
     .use(notFound)
-    //.use(errorHandlerMiddleware)
 
     const start = () => {
         try {

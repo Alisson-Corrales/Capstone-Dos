@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <form class="form file-form">
+    <h4>Store (Add Products)</h4>
+    <div class="form-row">
+      <label for="name" class="form-label">name</label>
+      <input type="text" id="name" class="form-input" value="chair">
+    </div>
+    <div class="form-row">
+      <label for="price" class="form-label">price</label>
+      <input type="text" id="price" class="form-input" value="123.45">
+    </div>
+    <div class="form-row">
+      <label for="image" class="form-label">image</label>
+      <input type="file" id="image" class="form-input" accept="image/*">
+    </div>
+    <button id="send" type="submit" class="btn btn-block">Add Product</button>
+    <button id="reset" type="submit" class="btn btn-block">Reset</button>
+  </form>
+  <section class="Container"></section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"
+    integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
