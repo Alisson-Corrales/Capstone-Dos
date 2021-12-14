@@ -1,4 +1,4 @@
-const Product = require("../model/product")
+const Product = require("../schema/product")
 
 const getAllProducts = (req, res) => {
     res.send("all good bro")

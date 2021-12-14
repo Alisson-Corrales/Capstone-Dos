@@ -10,7 +10,7 @@ const app = express();
 //const fileUpload = require("express-fileupload");
 
 //routers
-const productRouter = require("./routes/routeProduct");
+const productRouter = require("./routes/productRoute");
 const cloudinary = require("cloudinary").v2;
 cloudinary.config({
   cloud_name: process.env.cloud_name,

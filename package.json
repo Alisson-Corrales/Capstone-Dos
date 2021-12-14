@@ -1,7 +1,7 @@
 {
   "name": "job-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "- name - String\r     - Required\r - price - Number\r     - Required\r - image - String\r     - Required",
   "main": "app.js",
   "dependencies": {
     "bcrypt": "^5.0.1",
