@@ -1,4 +1,5 @@
 const url = 'api/v1/products'
+
 const fileform = document.querySelector('.file-form');
 const nameInput = document.querySelector('#name');
 const priceInput = document.querySelector('#price');
@@ -16,7 +17,6 @@ sendButton.addEventListener("click", async (e) => {
    price : priceInput.value,
    image : imageInput.value
   });
- 
 });
 
 
