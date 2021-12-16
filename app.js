@@ -30,8 +30,8 @@ app
     .use(express.static("./public"))
     .use([express.urlencoded({ extended: false }), express.json()])
 
-    .use("/api/v1/product", productRouter)
-    //.use('/send', router)
+    .use("/api/v1/products", productRouter)
+    .use('/send', productRouter)
     .get("/", (req,res) =>{res.send("")})
     .use(notFound)
 
