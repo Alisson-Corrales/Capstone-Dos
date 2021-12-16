@@ -18,7 +18,7 @@ cloudinary.config({
     api_secret: process.env.api_secret,
 });
 
-//const connectDB = require('./DB/connect')
+const connectDB = require('./DB/connect')
 
 //const stripeController = require("./controllers/stripeCont")
 
@@ -29,15 +29,16 @@ const port = process.env.port || 3000
 app
     .use(express.static("./public"))
     .use([express.urlencoded({ extended: false }), express.json()])
+    .use(fileUpload({ useTempFiles: true }))
 
     .use("/api/v1/product", productRouter)
     //.use('/send', router)
     .get("/", (req,res) =>{res.send("")})
     .use(notFound)
 
-    const start = () => {
+    const start = async () => {
         try {
-            //await connectDB(process.env.MONGO_URL)
+            await connectDB(process.env.MONGO_URL)
             app.listen(port, console.log(`listening @ ${port}`))
         } catch (err) {
             console.log(err);
