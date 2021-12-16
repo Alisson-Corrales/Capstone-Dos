@@ -8,9 +8,9 @@ const createProduct = async (req, res) => {
   res.status(StatusCodes.CREATED).json({ product });
 };
 
-const getAllProducts = async(req, res) => {
+const getAllProducts = async (req, res) => {
   const products = await Product.find({})
-  res.json({products});
+  res.status(200).json({products})
 };
 
 module.exports = {
