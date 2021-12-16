@@ -32,7 +32,7 @@ app
     .use(fileUpload({ useTempFiles: true }))
 
     .use("/api/v1/products", productRouter)
-    .use('/send', productRouter)
+    
 
 // .use(notFound)
 

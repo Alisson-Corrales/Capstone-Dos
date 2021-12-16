@@ -1,6 +1,6 @@
 require("dotenv").config();
 const { StatusCodes } = require("http-status-codes");
-const Product = require("../schema/product");
+const Product = require("../Models/product");
 
 const createProduct = async (req, res) => {
   const product = await Product.create(req.body);
