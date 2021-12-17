@@ -16,7 +16,7 @@ async function fetchProducts() {
         return `<article class="product">
       <img src="${product.image}" alt="${product.name}" class="img" />
       <footer>
-      <p><strong> ${product.name} </strong></p>
+      <h3><p><strong> ${product.name} </strong></p></h3>
       <span> ${product.price} </span>
       <span><button id="cart" productId="${product._id}"> add to cart!</button></span>
       </footer>
