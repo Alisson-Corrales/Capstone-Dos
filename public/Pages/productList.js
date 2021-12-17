@@ -17,6 +17,7 @@ async function fetchProducts() {
       <footer>
       <h3><p><strong> ${product.name} </strong></p></h3>
       <span> ${product.price} </span>
+      <span><button id="cart"> add to cart!</button></span>
       </footer>
       </article>`;
       })
