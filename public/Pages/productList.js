@@ -1,5 +1,6 @@
 const url = '/api/v1/products'
 const container = document.querySelector('#container');
+const cartButton = document.querySelector('#cart');
 
 
 async function fetchProducts() {
@@ -17,7 +18,7 @@ async function fetchProducts() {
       <footer>
       <p><strong> ${product.name} </strong></p>
       <span> ${product.price} </span>
-      <span><button id="cart"> add to cart!</button></span>
+      <span><button id="cart" productId="${product._id}"> add to cart!</button></span>
       </footer>
       </article>`;
       })
@@ -27,4 +28,15 @@ async function fetchProducts() {
     console.log(err);
   }
 }
+cartButton.addEventListener("click", async (e) => {
+  e.preventDefault();
+
+  await axios.post(`${url}/addToCart`, {
+    id_: id_input.value,
+    name: nameInput.value,
+    price: priceInput.value,
+    image: imageValue
+  });
+
+});
 fetchProducts()
